@@ -3,58 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>个人主页</title>
+    <title>商品价格</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        h1 {
-            margin: 0;
-        }
+
         .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 0 20px;
-        }
-        p {
-            line-height: 1.6;
-        }
-        footer {
-            background-color: #333;
-            color: #fff;
             text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+        }
+
+        #price {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        #updateButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        #updateButton:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
+    <div class="container">
+        <h1>商品价格</h1>
+        <div id="price">$1.00</div>
+        <button id="updateButton">更新价格</button>
+    </div>
 
-<header>
-    <h1>欢迎来到我的个人主页</h1>
-</header>
-
-<div class="container">
-    <h2>关于我</h2>
-    <p>你好，我是 Bob。欢迎访问我的个人主页。</p>
-    <p>那几位记得发邮件给我嗷：<a href="mailto:lk1404ssh@gmail.com">lk1404ssh@gmail.com</a></p>
-    <p>你也可以在我的 GitHub 代码仓库中查看我的项目：<a href="https://github.com/lk1404ssh/codedemo">https://github.com/lk1404ssh/codedemo</a></p>
-</div>
-
-<footer>
-	<p>还记得关注我的youtube,twitter,facebook哦⊙∀⊙！</p>
-</footer>
-
-</body>
-</html>
-
+    <script>
+        // 更新价格的函数
+        function updatePrice() {
+            var priceElement = document.getElementById('price');
+            priceElement.textContent = '$
